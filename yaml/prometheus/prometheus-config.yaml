@@ -24,11 +24,11 @@ data:
     # Here it's Prometheus itself.
     scrape_configs:
       # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-      - job_name: 'prometheus'
+      #- job_name: 'prometheus'
         # metrics_path defaults to '/metrics'
         # scheme defaults to 'http'.
-        static_configs:
-        - targets: ['192.168.178.80:9100','192.168.178.81:9100','192.168.178.82:9100','192.168.178.22:9100']
+      #  static_configs:
+      #  - targets: ['192.168.178.80:9100','192.168.178.81:9100','192.168.178.82:9100','192.168.178.22:9100']
       - job_name: 'node-exporter'
         kubernetes_sd_configs:
           - role: endpoints
