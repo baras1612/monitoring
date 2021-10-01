@@ -1,4 +1,7 @@
 apiVersion: v1
+kind: ConfigMap
+metadata:
+   name: prometheus-config  
 data:
   prometheus.yml: |
     global:
@@ -56,6 +59,3 @@ data:
           action: keep
         - source_labels: [__meta_kubernetes_pod_container_name]
           target_label: job
- kind: ConfigMap
- metadata:
-   name: prometheus-config    
