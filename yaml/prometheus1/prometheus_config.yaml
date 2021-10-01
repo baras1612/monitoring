@@ -14,6 +14,9 @@ data:
       scheme: https
       tls_config:
         ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        insecure-skip-tls-verify=true   skip server certificate verification
+        insecure-transport=true         disable transport security for client connections
+
             
     - job_name: 'cadvisor'
       kubernetes_sd_configs:
@@ -21,6 +24,8 @@ data:
       scheme: https
       tls_config:
         ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        insecure-skip-tls-verify=true   skip server certificate verification
+        insecure-transport=true         disable transport security for client connections
              
     - job_name: 'k8apiserver'
       kubernetes_sd_configs:
