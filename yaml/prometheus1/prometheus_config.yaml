@@ -14,7 +14,7 @@ data:
       scheme: https
       tls_config:
         ca_file: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
-        insecure-skip-tls-verify=true   #skip server certificate verification
+        #insecure-skip-tls-verify=true   #skip server certificate verification
         #insecure-transport=true         #disable transport security for client connections
 
             
